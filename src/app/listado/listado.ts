@@ -1,5 +1,5 @@
 import { Component, inject, OnInit} from '@angular/core';
-import { ServiciosService } from '../services/Sevicios.service';
+import { ServiciosService } from '../services/Servicios.service';
 import { Tarea } from '../interfaces/tarea.interface';
 import { DetallesComponent } from '../detalle/detalles.component';
 import { MatDialog } from '@angular/material/dialog';

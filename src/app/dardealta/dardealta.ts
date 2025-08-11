@@ -1,6 +1,6 @@
 import { Component, signal, output } from '@angular/core';
 import { Tarea } from '../interfaces/tarea.interface';
-import { ServiciosService } from '../services/Sevicios.service';
+import { ServiciosService } from '../services/Servicios.service';
 
 @Component({
   selector: 'app-dardealta',

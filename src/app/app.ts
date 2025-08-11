@@ -1,7 +1,7 @@
 import { Component, signal, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './navbar/navbar';
-import { ServiciosService } from './services/Sevicios.service';
+import { ServiciosService } from './services/Servicios.service';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, Navbar],
