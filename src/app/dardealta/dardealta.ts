@@ -63,7 +63,4 @@ export class Dardealta {
     return Number(id);
   }
 
-  private resetId(): void {
-    localStorage.setItem("ultimoid", "0");
-  }
 }

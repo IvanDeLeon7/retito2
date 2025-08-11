@@ -27,15 +27,17 @@ export class ServiciosService {
 
   EliminarTarea(tareaAEliminar: Tarea) {
   this.tareaguardada.update(tareas =>
-    tareas.filter(t =>
-      t.titulo !== tareaAEliminar.titulo ||
-      t.descripcion !== tareaAEliminar.descripcion
-    )
+    tareas.filter(t => t.id !== tareaAEliminar.id)
   );
 }
 
 EliminarTodasLasTareas() {
   this.tareaguardada.update(() => []);
+  this.resetId();
+}
+
+resetId(): void {
+  localStorage.setItem("ultimoid", "0");
 }
 
 filtracionesdetareas(seccion: string): Tarea[] {
