@@ -44,6 +44,11 @@ header {
     box-shadow: 0 4px 24px rgba(0,0,0,0.13);
     text-align: center;
 }
+
+.li-nohay{
+    max-width: 800px;
+    text-align: center;
+}
 .contenedor{
   max-width: 900px;
   margin: 30px auto;

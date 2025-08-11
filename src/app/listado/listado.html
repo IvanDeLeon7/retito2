@@ -45,10 +45,15 @@
                </div>
           </li>
         }
+        @if (tareasFiltradas.length === 0) {
+          <li class="li-nohay">
+            No hay tareas de esta seccion
+          </li>
+        }
       </ul>
   </div>
-
 }
+
 @if (getListado().length === 0) {
   <div class="container2">
     <p><b>No hay tareas disponibles</b></p>
