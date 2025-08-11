@@ -142,6 +142,10 @@ textarea {
     background: #ff5858;
 }
 
+.button--eliminartodo{
+  background: #0F0E0F;
+}
+
 .button--cancelar {
     background: grey;
 }
