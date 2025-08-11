@@ -1,0 +1,56 @@
+<header>Alta de tareas Indelpro</header>
+  <div class="top-bar">
+  </div>
+  <div class="top-bar">
+    <button class="button button--filtrar" (click)="Filtrarporseccion('Soporte y TI')">Soporte y TI</button>
+    <button class="button button--filtrar" (click)="Filtrarporseccion('Desarrollo')">Desarrollo</button>
+    <button class="button button--filtrar" (click)="Filtrarporseccion('Recursos Humanos')">Recursos Humanos</button>
+    <button class="button button--filtrar" (click)="Filtrarporseccion('Administración')">Administración</button>
+    <button class="button button--filtrar" (click)="Filtrarporseccion('Finanzas')">Finanzas</button>
+    <button class="button button--deshacer" (click)="DeshacerFiltros()">Deshacer Filtros</button>
+  </div>
+  @if (getListado().length > 0 && !filtrado) {
+    <div class="container">
+      <ul class="ul">
+        @for (tarea of getListado(); track tarea.id) {
+          <li class="li">
+            <span class ="tarea-texto">{{ tarea.titulo }}</span>
+              <br>
+              <span class ="tarea-texto">Seccion: {{tarea.seccion}}</span>
+               <div class = "li-botones">
+                <button class="button button--detalles" (click)="verdetalles(tarea)">Detalles</button>
+                <button class="button button--eliminar" (click)="Eliminar(tarea)">Eliminar</button>
+
+               </div>
+          </li>
+        }
+      </ul>
+  </div>
+  <div class="top-bar">
+    <button class = "button button--eliminar" (click)="EliminarTodo()">Eliminar todas las tareas</button>
+  </div>
+}
+@if (getListado().length > 0 && filtrado) {
+     <div class="container">
+      <ul class="ul">
+        @for (tarea of tareasFiltradas; track tarea.id) {
+          <li class="li">
+            <span class ="tarea-texto">{{ tarea.titulo }}</span>
+              <br>
+              <span class ="tarea-texto">Seccion: {{tarea.seccion}}</span>
+               <div class = "li-botones">
+                <button class="button button--detalles" (click)="verdetalles(tarea)">Detalles</button>
+                <button class="button button--eliminar" (click)="Eliminar(tarea)">Eliminar</button>
+
+               </div>
+          </li>
+        }
+      </ul>
+  </div>
+
+}
+@if (getListado().length === 0) {
+  <div class="container2">
+    <p><b>No hay tareas disponibles</b></p>
+  </div>
+}

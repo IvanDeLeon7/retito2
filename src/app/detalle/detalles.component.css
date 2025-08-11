@@ -1,0 +1,17 @@
+.detail-section {
+  margin-bottom: 16px;
+}
+
+.detail-section strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.detail-section p {
+  margin: 0;
+  padding: 8px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}

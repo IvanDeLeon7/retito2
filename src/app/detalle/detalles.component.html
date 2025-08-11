@@ -1,0 +1,22 @@
+<div mat-dialog-content>
+  <h2 mat-dialog-title>Detalles de la tarea</h2>
+
+  <div class="detail-section">
+    <strong>Título de la tarea:</strong>
+    <p>{{ tarea.titulo }}</p>
+  </div>
+
+    <div class="detail-section">
+    <strong>Sección de la tarea:</strong>
+    <p>{{ tarea.seccion }}</p>
+  </div>
+
+  <div class="detail-section">
+    <strong>Descripción de la tarea:</strong>
+    <p>{{ tarea.descripcion }}</p>
+  </div>
+</div>
+
+<div mat-dialog-actions align="end">
+  <button mat-button (click)="onClose()">Cerrar</button>
+</div>

@@ -1,0 +1,22 @@
+<div class="contenedor">
+<label for="title" class="titulo-label"><b>Titulo de la tarea: {{TituloTarea()}}</b></label>
+<br>
+<input type="text" id="titulotarea" placeholder="Ingrese el titulo" name="title" [value]="TituloTarea()" (input)="onTituloInput($event)">
+<br><br>
+<label for="Seccion" class="Seccion"><b>Seccion de la actividad:</b></label>
+<br>
+<select id="secciontarea" placeholder="Seleccione el area" title="seleccione" [value]="SeccionTarea()" (input)="onSeccionInput($event)">
+  <option value="" disabled selected>Select your option</option>
+  <option value="Soporte y TI">Soporte y TI</option>
+  <option value="Desarrollo">Desarrollo</option>
+  <option value="Recursos Humanos">Recursos Humanos</option>
+  <option value="Administración">Administración</option>
+  <option value="Finanzas">Finanzas</option>
+</select>
+<br>
+<br>
+<label for="descripcion"><b>Descripcion de la tarea:</b></label>
+<textarea id="descripcion" name="description" [value]="DescripcionTarea()" (input)="onDescripcionInput($event)"></textarea>
+<br><br>
+<button (click)="AgregarTarea()" class="button button--agregar" id="btn--agregar">Agregar tarea</button>
+</div>
